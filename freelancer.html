@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Hub - Freelancer Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); min-height: 100vh; color: #ffffff; }
+        .bounce-in { animation: bounceIn 1s ease-out; }
+        .shake { animation: shake 0.5s; }
+        .glow { box-shadow: 0 0 10px #8A2BE2; }
+        @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); } 70% { transform: scale(0.9); } 100% { transform: scale(1); opacity: 1; } }
+        @keyframes shake { 0%, 100% { transform: translateX(0); } 10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); } 20%, 40%, 60%, 80% { transform: translateX(10px); } }
+    </style>
+</head>
+<body class="text-white">
+    <nav class="bg-gray-900 bg-opacity-80 p-4 glow">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold"><i class="fas fa-rocket"></i> Freelance Hub</h1>
+            <a href="index.html" class="hover:text-green-400 transition duration-300"><i class="fas fa-home"></i> Home</a>
+        </div>
+    </nav>
+
+    <section class="container mx-auto p-8 text-center bounce-in">
+        <h2 class="text-4xl font-bold mb-8"><i class="fas fa-user-plus text-purple-400"></i> Freelancer Registration</h2>
+        <form id="freelancerForm" class="bg-gray-800 bg-opacity-70 p-8 rounded-lg max-w-lg mx-auto shadow-lg glow">
+            <div class="relative mb-4">
+                <i class="fas fa-user absolute left-3 top-3 text-purple-400"></i>
+                <input type="text" id="name" placeholder="Your Name" class="w-full pl-10 p-3 rounded bg-gray-700 text-white border-2 border-transparent focus:border-green-400 transition duration-300" required>
+            </div>
+            <div class="relative mb-4">
+                <i class="fas fa-envelope absolute left-3 top-3 text-purple-400"></i>
+                <input type="email" id="email" placeholder="Your Email" class="w-full pl-10 p-3 rounded bg-gray-700 text-white border-2 border-transparent focus:border-green-400 transition duration-300" required>
+            </div>
+            
+            <div class="relative mb-4">
+                <i class="fas fa-tags absolute left-3 top-3 text-purple-400"></i>
+                <select id="category" class="w-full pl-10 p-3 rounded bg-gray-700 text-white border-2 border-transparent focus:border-green-400 transition duration-300" required>
+                    <option value="">Select Category</option>
+                    <option value="Web Development"><i class="fas fa-code"></i> Web Development</option>
+                    <option value="Graphic Design"><i class="fas fa-palette"></i> Graphic Design</option>
+                    <option value="Writing & Content"><i class="fas fa-pen"></i> Writing & Content</option>
+                    <option value="Marketing"><i class="fas fa-bullhorn"></i> Marketing</option>
+                    <option value="Photography"><i class="fas fa-camera"></i> Photography</option>
+                    <option value="Video Editing"><i class="fas fa-video"></i> Video Editing</option>
+                    <option value="Translation"><i class="fas fa-language"></i> Translation</option>
+                    <option value="Data Entry"><i class="fas fa-database"></i> Data Entry</option>
+                    <option value="Other"><i class="fas fa-ellipsis-h"></i> Other</option>
+                </select>
+            </div>
+            
+            <div class="flex mb-4">
+                <div class="relative w-1/3">
+                    <i class="fas fa-globe absolute left-3 top-3 text-purple-400"></i>
+                    <select id="phoneCountryCode" class="w-full pl-10 p-3 rounded-l bg-gray-700 text-white border-2 border-transparent focus:border-green-400 transition duration-300" required>
+                        <!-- Full list of country codes (add all ~200; abbreviated here) -->
+<option value="+93">+93 (Afghanistan)</option>
+<option value="+355">+355 (Albania)</option>
+<option value="+213">+213 (Algeria)</option>
+<option value="+376">+376 (Andorra)</option>
+<option value="+244">+244 (Angola)</option>
+<option value="+1-268">+1-268 (Antigua and Barbuda)</option>
+<option value="+54">+54 (Argentina)</option>
+<option value="+374">+374 (Armenia)</option>
+<option value="+61">+61 (Australia)</option>
+<option value="+43">+43 (Austria)</option>
+<option value="+994">+994 (Azerbaijan)</option>
+<option value="+1-242">+1-242 (Bahamas)</option>
+<option value="+973">+973 (Bahrain)</option>
+<option value="+880">+880 (Bangladesh)</option>
+<option value="+1-246">+1-246 (Barbados)</option>
+<option value="+375">+375 (Belarus)</option>
+<option value="+32">+32 (Belgium)</option>
+<option value="+501">+501 (Belize)</option>
+<option value="+229">+229 (Benin)</option>
+<option value="+975">+975 (Bhutan)</option>
+<option value="+591">+591 (Bolivia)</option>
+<option value="+387">+387 (Bosnia and Herzegovina)</option>
+<option value="+267">+267 (Botswana)</option>
+<option value="+55">+55 (Brazil)</option>
+<option value="+673">+673 (Brunei)</option>
+<option value="+359">+359 (Bulgaria)</option>
+<option value="+226">+226 (Burkina Faso)</option>
+<option value="+257">+257 (Burundi)</option>
+<option value="+855">+855 (Cambodia)</option>
+<option value="+237">+237 (Cameroon)</option>
+<option value="+1">+1 (Canada)</option>
+<option value="+238">+238 (Cape Verde)</option>
+<option value="+236">+236 (Central African Republic)</option>
+<option value="+235">+235 (Chad)</option>
+<option value="+56">+56 (Chile)</option>
+<option value="+86">+86 (China)</option>
+<option value="+57">+57 (Colombia)</option>
+<option value="+269">+269 (Comoros)</option>
+<option value="+242">+242 (Congo)</option>
+<option value="+243">+243 (Congo, Democratic Republic of the)</option>
+<option value="+682">+682 (Cook Islands)</option>
+<option value="+506">+506 (Costa Rica)</option>
+<option value="+385">+385 (Croatia)</option>
+<option value="+53">+53 (Cuba)</option>
+<option value="+357">+357 (Cyprus)</option>
+<option value="+420">+420 (Czech Republic)</option>
+<option value="+45">+45 (Denmark)</option>
+<option value="+253">+253 (Djibouti)</option>
+<option value="+1-767">+1-767 (Dominica)</option>
+<option value="+1-809">+1-809 (Dominican Republic)</option>
+<option value="+593">+593 (Ecuador)</option>
+<option value="+20">+20 (Egypt)</option>
+<option value="+503">+503 (El Salvador)</option>
+<option value="+240">+240 (Equatorial Guinea)</option>
+<option value="+291">+291 (Eritrea)</option>
+<option value="+372">+372 (Estonia)</option>
+<option value="+251">+251 (Ethiopia)</option>
+<option value="+679">+679 (Fiji)</option>
+<option value="+358">+358 (Finland)</option>
+<option value="+33">+33 (France)</option>
+<option value="+241">+241 (Gabon)</option>
+<option value="+220">+220 (Gambia)</option>
+<option value="+995">+995 (Georgia)</option>
+<option value="+49">+49 (Germany)</option>
+<option value="+233">+233 (Ghana)</option>
+<option value="+30">+30 (Greece)</option>
+<option value="+1-473">+1-473 (Grenada)</option>
+<option value="+502">+502 (Guatemala)</option>
+<option value="+224">+224 (Guinea)</option>
+<option value="+245">+245 (Guinea-Bissau)</option>
+<option value="+592">+592 (Guyana)</option>
+<option value="+509">+509 (Haiti)</option>
+<option value="+504">+504 (Honduras)</option>
+<option value="+36">+36 (Hungary)</option>
+<option value="+354">+354 (Iceland)</option>
+<option value="+91">+91 (India)</option>
+<option value="+62">+62 (Indonesia)</option>
+<option value="+98">+98 (Iran)</option>
+<option value="+964">+964 (Iraq)</option>
+<option value="+353">+353 (Ireland)</option>
+<option value="+972">+972 (Israel)</option>
+<option value="+39">+39 (Italy)</option>
+<option value="+1-876">+1-876 (Jamaica)</option>
+<option value="+81">+81 (Japan)</option>
+<option value="+962">+962 (Jordan)</option>
+<option value="+7">+7 (Kazakhstan)</option>
+<option value="+254">+254 (Kenya)</option>
+<option value="+686">+686 (Kiribati)</option>
+<option value="+965">+965 (Kuwait)</option>
+<option value="+996">+996 (Kyrgyzstan)</option>
+<option value="+856">+856 (Laos)</option>
+<option value="+371">+371 (Latvia)</option>
+<option value="+961">+961 (Lebanon)</option>
+<option value="+266">+266 (Lesotho)</option>
+<option value="+231">+231 (Liberia)</option>
+<option value="+218">+218 (Libya)</option>
+<option value="+423">+423 (Liechtenstein)</option>
+<option value="+370">+370 (Lithuania)</option>
+<option value="+352">+352 (Luxembourg)</option>
+<option value="+261">+261 (Madagascar)</option>
+<option value="+265">+265 (Malawi)</option>
+<option value="+60">+60 (Malaysia)</option>
+<option value="+960">+960 (Maldives)</option>
+<option value="+223">+223 (Mali)</option>
+<option value="+356">+356 (Malta)</option>
+<option value="+692">+692 (Marshall Islands)</option>
+<option value="+222">+222 (Mauritania)</option>
+<option value="+230">+230 (Mauritius)</option>
+<option value="+52">+52 (Mexico)</option>
+<option value="+691">+691 (Micronesia)</option>
+<option value="+373">+373 (Moldova)</option>
+<option value="+377">+377 (Monaco)</option>
+<option value="+976">+976 (Mongolia)</option>
+<option value="+382">+382 (Montenegro)</option>
+<option value="+212">+212 (Morocco)</option>
+<option value="+258">+258 (Mozambique)</option>
+<option value="+95">+95 (Myanmar)</option>
+<option value="+264">+264 (Namibia)</option>
+<option value="+674">+674 (Nauru)</option>
+<option value="+977">+977 (Nepal)</option>
+<option value="+31">+31 (Netherlands)</option>
+<option value="+64">+64 (New Zealand)</option>
+<option value="+505">+505 (Nicaragua)</option>
+<option value="+227">+227 (Niger)</option>
+<option value="+234">+234 (Nigeria)</option>
+<option value="+850">+850 (North Korea)</option>
+<option value="+389">+389 (North Macedonia)</option>
+<option value="+47">+47 (Norway)</option>
+<option value="+968">+968 (Oman)</option>
+<option value="+92">+92 (Pakistan)</option>
+<option value="+680">+680 (Palau)</option>
+<option value="+970">+970 (Palestine)</option>
+<option value="+507">+507 (Panama)</option>
+<option value="+675">+675 (Papua New Guinea)</option>
+<option value="+595">+595 (Paraguay)</option>
+<option value="+51">+51 (Peru)</option>
+<option value="+63">+63 (Philippines)</option>
+<option value="+48">+48 (Poland)</option>
+<option value="+351">+351 (Portugal)</option>
+<option value="+974">+974 (Qatar)</option>
+<option value="+40">+40 (Romania)</option>
+<option value="+7">+7 (Russia)</option>
+<option value="+250">+250 (Rwanda)</option>
+<option value="+1-869">+1-869 (Saint Kitts and Nevis)</option>
+<option value="+1-758">+1-758 (Saint Lucia)</option>
+<option value="+1-784">+1-784 (Saint Vincent and the Grenadines)</option>
+<option value="+685">+685 (Samoa)</option>
+<option value="+378">+378 (San Marino)</option>
+<option value="+239">+239 (Sao Tome and Principe)</option>
+<option value="+966">+966 (Saudi Arabia)</option>
+<option value="+221">+221 (Senegal)</option>
+<option value="+381">+381 (Serbia)</option>
+<option value="+248">+248 (Seychelles)</option>
+<option value="+232">+232 (Sierra Leone)</option>
+<option value="+65">+65 (Singapore)</option>
+<option value="+421">+421 (Slovakia)</option>
+<option value="+386">+386 (Slovenia)</option>
+<option value="+677">+677 (Solomon Islands)</option>
+<option value="+252">+252 (Somalia)</option>
+<option value="+27">+27 (South Africa)</option>
+<option value="+82">+82 (South Korea)</option>
+<option value="+211">+211 (South Sudan)</option>
+<option value="+34">+34 (Spain)</option>
+<option value="+94">+94 (Sri Lanka)</option>
+<option value="+249">+249 (Sudan)</option>
+<option value="+597">+597 (Suriname)</option>
+<option value="+46">+46 (Sweden)</option>
+<option value="+41">+41 (Switzerland)</option>
+<option value="+963">+963 (Syria)</option>
+<option value="+886">+886 (Taiwan)</option>
+<option value="+992">+992 (Tajikistan)</option>
+<option value="+255">+255 (Tanzania)</option>
+<option value="+66">+66 (Thailand)</option>
+<option value="+670">+670 (Timor-Leste)</option>
+<option value="+228">+228 (Togo)</option>
+<option value="+676">+676 (Tonga)</option>
+<option value="+1-868">+1-868 (Trinidad and Tobago)</option>
+<option value="+216">+216 (Tunisia)</option>
+<option value="+90">+90 (Turkey)</option>
+<option value="+993">+993 (Turkmenistan)</option>
+<option value="+688">+688 (Tuvalu)</option>
+<option value="+256">+256 (Uganda)</option>
+<option value="+380">+380 (Ukraine)</option>
+<option value="+971">+971 (United Arab Emirates)</option>
+<option value="+44">+44 (United Kingdom)</option>
+<option value="+1">+1 (United States)</option>
+<option value="+598">+598 (Uruguay)</option>
+<option value="+998">+998 (Uzbekistan)</option>
+<option value="+678">+678 (Vanuatu)</option>
+<option value="+379">+379 (Vatican City)</option>
+<option value="+58">+58 (Venezuela)</option>
+<option value="+84">+84 (Vietnam)</option>
+<option value="+967">+967 (Yemen)</option>
+<option value="+260">+260 (Zambia)</option>
+<option value="+263">+263 (Zimbabwe)</option>
+
+                    </select>
+                </div>
+                <div class="relative w-2/3">
+                    <i class="fas fa-phone absolute left-3 top-3 text-purple-400"></i>
+                    <input type="tel" id="mobile" placeholder="Mobile Number" class="w-full pl-10 p-3 rounded-r bg-gray-700 text-white border-2 border-transparent focus:border-green-400 transition duration-300" required>
+                </div>
+            </div>
+            
+            <div class="relative mb-4">
+                <i class="fas fa-map-marker-alt absolute left-3 top-3 text-purple-400"></i>
+                <select id="country" class="w-full pl-10 p-3 rounded bg-gray-700 text-white border-2 border-transparent focus:border-green-400 transition duration-300" required>
+                    <option value="">Select Country</option>
+<option value="Afghanistan"><i class="fas fa-globe"></i> Afghanistan</option>
+<option value="Albania"><i class="fas fa-globe"></i> Albania</option>
+<option value="Algeria"><i class="fas fa-globe"></i> Algeria</option>
+<option value="Andorra"><i class="fas fa-globe"></i> Andorra</option>
+<option value="Angola"><i class="fas fa-globe"></i> Angola</option>
+<option value="Antigua and Barbuda"><i class="fas fa-globe"></i> Antigua and Barbuda</option>
+<option value="Argentina"><i class="fas fa-globe"></i> Argentina</option>
+<option value="Armenia"><i class="fas fa-globe"></i> Armenia</option>
+<option value="Australia"><i class="fas fa-globe"></i> Australia</option>
+<option value="Austria"><i class="fas fa-globe"></i> Austria</option>
+<option value="Azerbaijan"><i class="fas fa-globe"></i> Azerbaijan</option>
+<option value="Bahamas"><i class="fas fa-globe"></i> Bahamas</option>
+<option value="Bahrain"><i class="fas fa-globe"></i> Bahrain</option>
+<option value="Bangladesh"><i class="fas fa-globe"></i> Bangladesh</option>
+<option value="Barbados"><i class="fas fa-globe"></i> Barbados</option>
+<option value="Belarus"><i class="fas fa-globe"></i> Belarus</option>
+<option value="Belgium"><i class="fas fa-globe"></i> Belgium</option>
+<option value="Belize"><i class="fas fa-globe"></i> Belize</option>
+<option value="Benin"><i class="fas fa-globe"></i> Benin</option>
+<option value="Bhutan"><i class="fas fa-globe"></i> Bhutan</option>
+<option value="Bolivia"><i class="fas fa-globe"></i> Bolivia</option>
+<option value="Bosnia and Herzegovina"><i class="fas fa-globe"></i> Bosnia and Herzegovina</option>
+<option value="Botswana"><i class="fas fa-globe"></i> Botswana</option>
+<option value="Brazil"><i class="fas fa-globe"></i> Brazil</option>
+<option value="Brunei"><i class="fas fa-globe"></i> Brunei</option>
+<option value="Bulgaria"><i class="fas fa-globe"></i> Bulgaria</option>
+<option value="Burkina Faso"><i class="fas fa-globe"></i> Burkina Faso</option>
+<option value="Burundi"><i class="fas fa-globe"></i> Burundi</option>
+<option value="Cabo Verde"><i class="fas fa-globe"></i> Cabo Verde</option>
+<option value="Cambodia"><i class="fas fa-globe"></i> Cambodia</option>
+<option value="Cameroon"><i class="fas fa-globe"></i> Cameroon</option>
+<option value="Canada"><i class="fas fa-globe"></i> Canada</option>
+<option value="Central African Republic"><i class="fas fa-globe"></i> Central African Republic</option>
+<option value="Chad"><i class="fas fa-globe"></i> Chad</option>
+<option value="Chile"><i class="fas fa-globe"></i> Chile</option>
+<option value="China"><i class="fas fa-globe"></i> China</option>
+<option value="Colombia"><i class="fas fa-globe"></i> Colombia</option>
+<option value="Comoros"><i class="fas fa-globe"></i> Comoros</option>
+<option value="Congo, Democratic Republic of the"><i class="fas fa-globe"></i> Congo, Democratic Republic of the</option>
+<option value="Congo, Republic of the"><i class="fas fa-globe"></i> Congo, Republic of the</option>
+<option value="Costa Rica"><i class="fas fa-globe"></i> Costa Rica</option>
+<option value="Croatia"><i class="fas fa-globe"></i> Croatia</option>
+<option value="Cuba"><i class="fas fa-globe"></i> Cuba</option>
+<option value="Cyprus"><i class="fas fa-globe"></i> Cyprus</option>
+<option value="Czech Republic"><i class="fas fa-globe"></i> Czech Republic</option>
+<option value="Denmark"><i class="fas fa-globe"></i> Denmark</option>
+<option value="Djibouti"><i class="fas fa-globe"></i> Djibouti</option>
+<option value="Dominica"><i class="fas fa-globe"></i> Dominica</option>
+<option value="Dominican Republic"><i class="fas fa-globe"></i> Dominican Republic</option>
+<option value="Ecuador"><i class="fas fa-globe"></i> Ecuador</option>
+<option value="Egypt"><i class="fas fa-globe"></i> Egypt</option>
+<option value="El Salvador"><i class="fas fa-globe"></i> El Salvador</option>
+<option value="Equatorial Guinea"><i class="fas fa-globe"></i> Equatorial Guinea</option>
+<option value="Eritrea"><i class="fas fa-globe"></i> Eritrea</option>
+<option value="Estonia"><i class="fas fa-globe"></i> Estonia</option>
+<option value="Eswatini"><i class="fas fa-globe"></i> Eswatini</option>
+<option value="Ethiopia"><i class="fas fa-globe"></i> Ethiopia</option>
+<option value="Fiji"><i class="fas fa-globe"></i> Fiji</option>
+<option value="Finland"><i class="fas fa-globe"></i> Finland</option>
+<option value="France"><i class="fas fa-globe"></i> France</option>
+<option value="Gabon"><i class="fas fa-globe"></i> Gabon</option>
+<option value="Gambia"><i class="fas fa-globe"></i> Gambia</option>
+<option value="Georgia"><i class="fas fa-globe"></i> Georgia</option>
+<option value="Germany"><i class="fas fa-globe"></i> Germany</option>
+<option value="Ghana"><i class="fas fa-globe"></i> Ghana</option>
+<option value="Greece"><i class="fas fa-globe"></i> Greece</option>
+<option value="Grenada"><i class="fas fa-globe"></i> Grenada</option>
+<option value="Guatemala"><i class="fas fa-globe"></i> Guatemala</option>
+<option value="Guinea"><i class="fas fa-globe"></i> Guinea</option>
+<option value="Guinea-Bissau"><i class="fas fa-globe"></i> Guinea-Bissau</option>
+<option value="Guyana"><i class="fas fa-globe"></i> Guyana</option>
+<option value="Haiti"><i class="fas fa-globe"></i> Haiti</option>
+<option value="Honduras"><i class="fas fa-globe"></i> Honduras</option>
+<option value="Hungary"><i class="fas fa-globe"></i> Hungary</option>
+<option value="Iceland"><i class="fas fa-globe"></i> Iceland</option>
+<option value="India"><i class="fas fa-globe"></i> India</option>
+<option value="Indonesia"><i class="fas fa-globe"></i> Indonesia</option>
+<option value="Iran"><i class="fas fa-globe"></i> Iran</option>
+<option value="Iraq"><i class="fas fa-globe"></i> Iraq</option>
+<option value="Ireland"><i class="fas fa-globe"></i> Ireland</option>
+<option value="Israel"><i class="fas fa-globe"></i> Israel</option>
+<option value="Italy"><i class="fas fa-globe"></i> Italy</option>
+<option value="Jamaica"><i class="fas fa-globe"></i> Jamaica</option>
+<option value="Japan"><i class="fas fa-globe"></i> Japan</option>
+<option value="Jordan"><i class="fas fa-globe"></i> Jordan</option>
+<option value="Kazakhstan"><i class="fas fa-globe"></i> Kazakhstan</option>
+<option value="Kenya"><i class="fas fa-globe"></i> Kenya</option>
+<option value="Kiribati"><i class="fas fa-globe"></i> Kiribati</option>
+<option value="Kuwait"><i class="fas fa-globe"></i> Kuwait</option>
+<option value="Kyrgyzstan"><i class="fas fa-globe"></i> Kyrgyzstan</option>
+<option value="Laos"><i class="fas fa-globe"></i> Laos</option>
+<option value="Latvia"><i class="fas fa-globe"></i> Latvia</option>
+<option value="Lebanon"><i class="fas fa-globe"></i> Lebanon</option>
+<option value="Lesotho"><i class="fas fa-globe"></i> Lesotho</option>
+<option value="Liberia"><i class="fas fa-globe"></i> Liberia</option>
+<option value="Libya"><i class="fas fa-globe"></i> Libya</option>
+<option value="Liechtenstein"><i class="fas fa-globe"></i> Liechtenstein</option>
+<option value="Lithuania"><i class="fas fa-globe"></i> Lithuania</option>
+<option value="Luxembourg"><i class="fas fa-globe"></i> Luxembourg</option>
+<option value="Madagascar"><i class="fas fa-globe"></i> Madagascar</option>
+<option value="Malawi"><i class="fas fa-globe"></i> Malawi</option>
+<option value="Malaysia"><i class="fas fa-globe"></i> Malaysia</option>
+<option value="Maldives"><i class="fas fa-globe"></i> Maldives</option>
+<option value="Mali"><i class="fas fa-globe"></i> Mali</option>
+<option value="Malta"><i class="fas fa-globe"></i> Malta</option>
+<option value="Marshall Islands"><i class="fas fa-globe"></i> Marshall Islands</option>
+<option value="Mauritania"><i class="fas fa-globe"></i> Mauritania</option>
+<option value="Mauritius"><i class="fas fa-globe"></i> Mauritius</option>
+<option value="Mexico"><i class="fas fa-globe"></i> Mexico</option>
+<option value="Micronesia"><i class="fas fa-globe"></i> Micronesia</option>
+<option value="Moldova"><i class="fas fa-globe"></i> Moldova</option>
+<option value="Monaco"><i class="fas fa-globe"></i> Monaco</option>
+<option value="Mongolia"><i class="fas fa-globe"></i> Mongolia</option>
+<option value="Montenegro"><i class="fas fa-globe"></i> Montenegro</option>
+<option value="Morocco"><i class="fas fa-globe"></i> Morocco</option>
+<option value="Mozambique"><i class="fas fa-globe"></i> Mozambique</option>
+<option value="Myanmar"><i class="fas fa-globe"></i> Myanmar</option>
+<option value="Namibia"><i class="fas fa-globe"></i> Namibia</option>
+<option value="Nauru"><i class="fas fa-globe"></i> Nauru</option>
+<option value="Nepal"><i class="fas fa-globe"></i> Nepal</option>
+<option value="Netherlands"><i class="fas fa-globe"></i> Netherlands</option>
+<option value="New Zealand"><i class="fas fa-globe"></i> New Zealand</option>
+<option value="Nicaragua"><i class="fas fa-globe"></i> Nicaragua</option>
+<option value="Niger"><i class="fas fa-globe"></i> Niger</option>
+<option value="Nigeria"><i class="fas fa-globe"></i> Nigeria</option>
+<option value="North Korea"><i class="fas fa-globe"></i> North Korea</option>
+<option value="North Macedonia"><i class="fas fa-globe"></i> North Macedonia</option>
+<option value="Norway"><i class="fas fa-globe"></i> Norway</option>
+<option value="Oman"><i class="fas fa-globe"></i> Oman</option>
+<option value="Pakistan"><i class="fas fa-globe"></i> Pakistan</option>
+<option value="Palau"><i class="fas fa-globe"></i> Palau</option>
+<option value="Palestine"><i class="fas fa-globe"></i> Palestine</option>
+<option value="Panama"><i class="fas fa-globe"></i> Panama</option>
+<option value="Papua New Guinea"><i class="fas fa-globe"></i> Papua New Guinea</option>
+<option value="Paraguay"><i class="fas fa-globe"></i> Paraguay</option>
+<option value="Peru"><i class="fas fa-globe"></i> Peru</option>
+<option value="Philippines"><i class="fas fa-globe"></i> Philippines</option>
+<option value="Poland"><i class="fas fa-globe"></i> Poland</option>
+<option value="Portugal"><i class="fas fa-globe"></i> Portugal</option>
+<option value="Qatar"><i class="fas fa-globe"></i> Qatar</option>
+<option value="Romania"><i class="fas fa-globe"></i> Romania</option>
+<option value="Russia"><i class="fas fa-globe"></i> Russia</option>
+<option value="Rwanda"><i class="fas fa-globe"></i> Rwanda</option>
+<option value="Saint Kitts and Nevis"><i class="fas fa-globe"></i> Saint Kitts and Nevis</option>
+<option value="Saint Lucia"><i class="fas fa-globe"></i> Saint Lucia</option>
+<option value="Saint Vincent and the Grenadines"><i class="fas fa-globe"></i> Saint Vincent and the Grenadines</option>
+<option value="Samoa"><i class="fas fa-globe"></i> Samoa</option>
+<option value="San Marino"><i class="fas fa-globe"></i> San Marino</option>
+<option value="Sao Tome and Principe"><i class="fas fa-globe"></i> Sao Tome and Principe</option>
+<option value="Saudi Arabia"><i class="fas fa-globe"></i> Saudi Arabia</option>
+<option value="Senegal"><i class="fas fa-globe"></i> Senegal</option>
+<option value="Serbia"><i class="fas fa-globe"></i> Serbia</option>
+<option value="Seychelles"><i class="fas fa-globe"></i> Seychelles</option>
+<option value="Sierra Leone"><i class="fas fa-globe"></i> Sierra Leone</option>
+<option value="Singapore"><i class="fas fa-globe"></i> Singapore</option>
+<option value="Slovakia"><i class="fas fa-globe"></i> Slovakia</option>
+<option value="Slovenia"><i class="fas fa-globe"></i> Slovenia</option>
+<option value="Solomon Islands"><i class="fas fa-globe"></i> Solomon Islands</option>
+<option value="Somalia"><i class="fas fa-globe"></i> Somalia</option>
+<option value="South Africa"><i class="fas fa-globe"></i> South Africa</option>
+<option value="South Korea"><i class="fas fa-globe"></i> South Korea</option>
+<option value="South Sudan"><i class="fas fa-globe"></i> South Sudan</option>
+<option value="Spain"><i class="fas fa-globe"></i> Spain</option>
+<option value="Sri Lanka"><i class="fas fa-globe"></i> Sri Lanka</option>
+<option value="Sudan"><i class="fas fa-globe"></i> Sudan</option>
+<option value="Suriname"><i class="fas fa-globe"></i> Suriname</option>
+<option value="Sweden"><i class="fas fa-globe"></i> Sweden</option>
+<option value="Switzerland"><i class="fas fa-globe"></i> Switzerland</option>
+<option value="Syria"><i class="fas fa-globe"></i> Syria</option>
+<option value="Taiwan"><i class="fas fa-globe"></i> Taiwan</option>
+<option value="Tajikistan"><i class="fas fa-globe"></i> Tajikistan</option>
+<option value="Tanzania"><i class="fas fa-globe"></i> Tanzania</option>
+<option value="Thailand"><i class="fas fa-globe"></i> Thailand</option>
+<option value="Timor-Leste"><i class="fas fa-globe"></i> Timor-Leste</option>
+<option value="Togo"><i class="fas fa-globe"></i> Togo</option>
+<option value="Tonga"><i class="fas fa-globe"></i> Tonga</option>
+<option value="Trinidad and Tobago"><i class="fas fa-globe"></i> Trinidad and Tobago</option>
+<option value="Tunisia"><i class="fas fa-globe"></i> Tunisia</option>
+<option value="Turkey"><i class="fas fa-globe"></i> Turkey</option>
+<option value="Turkmenistan"><i class="fas fa-globe"></i> Turkmenistan</option>
+<option value="Tuvalu"><i class="fas fa-globe"></i> Tuvalu</option>
+<option value="Uganda"><i class="fas fa-globe"></i> Uganda</option>
+<option value="Ukraine"><i class="fas fa-globe"></i> Ukraine</option>
+<option value="United Arab Emirates"><i class="fas fa-globe"></i> United Arab Emirates</option>
+<option value="United Kingdom"><i class="fas fa-globe"></i> United Kingdom</option>
+<option value="United States"><i class="fas fa-globe"></i> United States</option>
+<option value="Uruguay"><i class="fas fa-globe"></i> Uruguay</option>
+<option value="Uzbekistan"><i class="fas fa-globe"></i> Uzbekistan</option>
+<option value="Vanuatu"><i class="fas fa-globe"></i> Vanuatu</option>
+<option value="Vatican City"><i class="fas fa-globe"></i> Vatican City</option>
+<option value="Venezuela"><i class="fas fa-globe"></i> Venezuela</option>
+<option value="Vietnam"><i class="fas fa-globe"></i> Vietnam</option>
+<option value="Yemen
+
+                </select>
+            </div>
+            
+            <button type="submit" class="w-full bg-purple-600 p-3 rounded-full hover:bg-purple-700 transition duration-300 shake glow"><i class="fas fa-paper-plane"></i> Register</button>
+        </form>
+        <p id="registerMsg" class="text-center mt-4 text-green-400"><i class="fas fa-check-circle"></i></p>
+    </section>
+
+    <script>
+        document.getElementById('freelancerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                category: document.getElementById('category').value,
+                phone: `${document.getElementById('phoneCountryCode').value} ${document.getElementById('mobile').value}`,
+                country: document.getElementById('country').value
+            };
+            try {
+                const response = await fetch('https://freelance-backend-hgo5.onrender.com/api/freelancers/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                const result = await response.json();
+                document.getElementById('registerMsg').textContent = response.ok ? result.message : `Error: ${result.error}`;
+            } catch (err) {
+                document.getElementById('registerMsg').textContent = 'Network error. Please try again.';
+            }
+            this.reset();
+        });
+    </script>
+</body>
+</html>

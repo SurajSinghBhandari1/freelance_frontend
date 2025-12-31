@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelance Hub - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%); min-height: 100vh; color: #ffffff; overflow-x: hidden; }
+        .fade-in { animation: fadeIn 1.5s ease-in; }
+        .slide-up { animation: slideUp 1s ease-out; }
+        .pulse { animation: pulse 2s infinite; }
+        .parallax { transform: translateZ(0); animation: parallax 10s linear infinite; }
+        .rotate { animation: rotate 3s linear infinite; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes pulse { 0%, 100% { transform: scale(1); box-shadow: 0 0 10px #8A2BE2; } 50% { transform: scale(1.05); box-shadow: 0 0 20px #00FF00; } }
+        @keyframes parallax { 0% { transform: translateY(0); } 100% { transform: translateY(-50px); } }
+        @keyframes rotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-10px); } }
+        .glow { box-shadow: 0 0 10px #8A2BE2; }
+    </style>
+</head>
+<body class="text-white">
+    <nav class="bg-gray-900 bg-opacity-80 p-4 fade-in glow">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold"><i class="fas fa-rocket rotate"></i> Freelance Hub</h1>
+            <div>
+                <a href="freelancer.html" class="mr-4 hover:text-green-400 transition duration-300"><i class="fas fa-user-plus"></i> Freelancer Register</a>
+                <a href="client.html" class="hover:text-purple-400 transition duration-300"><i class="fas fa-search"></i> Client Inquire</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container mx-auto p-8 text-center slide-up parallax">
+        <h2 class="text-5xl font-bold mb-4 floating"><i class="fas fa-connectdevelop"></i> Connect Freelancers & Clients Effortlessly</h2>
+        <p class="text-lg mb-8">Freelancers register, clients inquire—we handle the match with style!</p>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gray-800 bg-opacity-70 p-6 rounded-lg hover:bg-opacity-90 transition duration-500 pulse glow">
+                <h3 class="text-2xl mb-4"><i class="fas fa-tools text-green-400"></i> For Freelancers</h3>
+                <p>Join our vibrant network. We'll connect you with opportunities.</p>
+                <a href="freelancer.html" class="mt-4 inline-block bg-purple-600 px-6 py-3 rounded-full hover:bg-purple-700 transition duration-300"><i class="fas fa-arrow-right"></i> Register Now</a>
+            </div>
+            <div class="bg-gray-800 bg-opacity-70 p-6 rounded-lg hover:bg-opacity-90 transition duration-500 pulse glow">
+                <h3 class="text-2xl mb-4"><i class="fas fa-lightbulb text-green-400"></i> For Clients</h3>
+                <p>Submit your project needs. We'll find the perfect freelancer.</p>
+                <a href="client.html" class="mt-4 inline-block bg-green-600 px-6 py-3 rounded-full hover:bg-green-700 transition duration-300"><i class="fas fa-arrow-right"></i> Inquire Now</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div class="floating absolute top-10 left-10 text-6xl opacity-20 text-purple-400"><i class="fas fa-star rotate"></i></div>
+        <div class="floating absolute top-20 right-20 text-4xl opacity-30 text-green-400"><i class="fas fa-circle"></i></div>
+        <div class="floating absolute bottom-10 left-20 text-5xl opacity-25 text-purple-400"><i class="fas fa-heart"></i></div>
+    </div>
+</body>
+</html>
