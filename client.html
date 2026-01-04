@@ -502,8 +502,8 @@
                 category: document.getElementById('category').value,
                 phone: `${document.getElementById('phoneCountryCode').value} ${document.getElementById('mobile').value}`,
                 country: document.getElementById('country').value,
-                projectDesc: document.getElementById('projectDesc').value,
-                projectTodo: document.getElementById('projectTodo').value
+projectDesc: document.getElementById('projectDesc').value
+
             };
             try {
                 const response = await fetch('https://freelance-backend-hgo5.onrender.com/api/clients/inquire', {
@@ -521,4 +521,5 @@
     </script>
 </body>
 </html>
+
 
