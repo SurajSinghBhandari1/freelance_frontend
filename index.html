@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freelance Hub - Home</title>
+    <title>Freelance Hub - Find Freelancers & Get Work Done</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -13,6 +13,7 @@
             color: #ffffff; 
             overflow-x: hidden; 
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
         }
         .glow { 
             box-shadow: 0 0 20px rgba(138, 43, 226, 0.5); 
@@ -33,38 +34,200 @@
     </style>
 </head>
 <body class="text-white">
-    <nav class="bg-gray-900 bg-opacity-90 p-6 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center max-w-6xl">
+    <!-- Header -->
+    <header class="bg-gray-900 bg-opacity-90 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center max-w-7xl">
             <h1 class="text-3xl font-bold text-purple-400"><i class="fas fa-rocket mr-2"></i> Freelance Hub</h1>
-            <div class="space-x-6">
-                <a href="freelancer.html" class="text-white hover:text-green-400 transition duration-300 text-lg"><i class="fas fa-user-plus mr-1"></i> Freelancer Register</a>
-                <a href="client.html" class="text-white hover:text-purple-400 transition duration-300 text-lg"><i class="fas fa-search mr-1"></i> Client Inquire</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#categories" class="text-white hover:text-green-400 transition duration-300">Categories</a>
+                <a href="#how-it-works" class="text-white hover:text-green-400 transition duration-300">How it Works</a>
+                <a href="#about" class="text-white hover:text-green-400 transition duration-300">About</a>
+                <a href="#signin" class="text-white hover:text-green-400 transition duration-300">Sign In</a>
+            </nav>
+            <div class="flex space-x-4">
+                <a href="freelancer.html" class="bg-green-600 px-4 py-2 rounded-full hover:bg-green-700 transition duration-300">Join as Freelancer</a>
+                <a href="client.html" class="bg-purple-600 px-4 py-2 rounded-full hover:bg-purple-700 transition duration-300">Post a Project</a>
             </div>
         </div>
-    </nav>
+        <!-- Search Bar -->
+        <div class="container mx-auto mt-4 max-w-4xl">
+            <form class="flex bg-white rounded-full overflow-hidden shadow-lg">
+                <input type="text" placeholder="What service are you looking for today?" class="flex-1 px-4 py-3 text-gray-800 focus:outline-none">
+                <button type="submit" class="bg-green-600 px-6 py-3 text-white font-semibold hover:bg-green-700 transition duration-300"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
 
+    <!-- Hero Section -->
     <section class="container mx-auto p-12 text-center max-w-6xl">
-        <h2 class="text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-green-400"><i class="fas fa-connectdevelop mr-3"></i> Connect Freelancers & Clients Effortlessly</h2>
-        <p class="text-xl mb-12 text-gray-300 leading-relaxed">Freelancers register, clients inquire—we handle the match with style and precision!</p>
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl shadow-2xl card-hover glow">
-                <h3 class="text-3xl mb-6 text-green-400"><i class="fas fa-tools mr-2"></i> For Freelancers</h3>
-                <p class="text-lg mb-6 text-gray-300">Join our vibrant network of talented professionals. We'll connect you with exciting opportunities tailored to your skills.</p>
-                <a href="freelancer.html" class="inline-block bg-purple-600 text-white px-8 py-4 rounded-full font-semibold btn-hover hover:bg-purple-700"><i class="fas fa-arrow-right mr-2"></i> Register Now</a>
+        <h2 class="text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-green-400">Find the Perfect Freelancer for Your Project</h2>
+        <p class="text-xl mb-8 text-gray-300">Millions of people use Freelance Hub to turn their ideas into reality.</p>
+        <div class="flex justify-center space-x-4">
+            <a href="client.html" class="bg-green-600 text-white px-8 py-4 rounded-full font-semibold btn-hover hover:bg-green-700">Get Started</a>
+            <a href="#popular-services" class="bg-purple-600 text-white px-8 py-4 rounded-full font-semibold btn-hover hover:bg-purple-700">Explore Services</a>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="container mx-auto p-12 max-w-7xl">
+        <h3 class="text-4xl font-bold mb-8 text-center text-purple-400">Popular Categories</h3>
+        <div class="grid md:grid-cols-4 gap-8">
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl card-hover glow text-center">
+                <i class="fas fa-code text-4xl text-green-400 mb-4"></i>
+                <h4 class="text-xl font-semibold mb-2">Web Development</h4>
+                <p class="text-gray-300">Build websites and apps</p>
             </div>
-            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-xl shadow-2xl card-hover glow">
-                <h3 class="text-3xl mb-6 text-green-400"><i class="fas fa-lightbulb mr-2"></i> For Clients</h3>
-                <p class="text-lg mb-6 text-gray-300">Submit your project needs and let us find the perfect freelancer to bring your vision to life.</p>
-                <a href="client.html" class="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-semibold btn-hover hover:bg-green-700"><i class="fas fa-arrow-right mr-2"></i> Inquire Now</a>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl card-hover glow text-center">
+                <i class="fas fa-palette text-4xl text-green-400 mb-4"></i>
+                <h4 class="text-xl font-semibold mb-2">Graphic Design</h4>
+                <p class="text-gray-300">Create stunning visuals</p>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl card-hover glow text-center">
+                <i class="fas fa-pen text-4xl text-green-400 mb-4"></i>
+                <h4 class="text-xl font-semibold mb-2">Writing & Content</h4>
+                <p class="text-gray-300">Craft compelling content</p>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl card-hover glow text-center">
+                <i class="fas fa-video text-4xl text-green-400 mb-4"></i>
+                <h4 class="text-xl font-semibold mb-2">Video Editing</h4>
+                <p class="text-gray-300">Edit and produce videos</p>
             </div>
         </div>
     </section>
 
-    <div class="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
-        <div class="absolute top-10 left-10 text-6xl opacity-20 text-purple-400"><i class="fas fa-star"></i></div>
-        <div class="absolute top-20 right-20 text-4xl opacity-30 text-green-400"><i class="fas fa-circle"></i></div>
-        <div class="absolute bottom-10 left-20 text-5xl opacity-25 text-purple-400"><i class="fas fa-heart"></i></div>
-        <div class="absolute bottom-20 right-10 text-5xl opacity-20 text-green-400"><i class="fas fa-code"></i></div>
-    </div>
+    <!-- Popular Services Section -->
+    <section id="popular-services" class="container mx-auto p-12 max-w-7xl">
+        <h3 class="text-4xl font-bold mb-8 text-center text-green-400">Popular Services</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl card-hover glow">
+                <img src="https://via.placeholder.com/300x200" alt="Service" class="w-full h-32 object-cover rounded mb-4">
+                <h4 class="text-xl font-semibold mb-2">Logo Design</h4>
+                <p class="text-gray-300 mb-4">Professional logo creation starting at $50</p>
+                <div class="flex items-center">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2">4.9 (120 reviews)</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl card-hover glow">
+                <img src="https://via.placeholder.com/300x200" alt="Service" class="w-full h-32 object-cover rounded mb-4">
+                <h4 class="text-xl font-semibold mb-2">Website Development</h4>
+                <p class="text-gray-300 mb-4">Custom websites starting at $200</p>
+                <div class="flex items-center">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2">4.8 (95 reviews)</span>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl card-hover glow">
+                <img src="https://via.placeholder.com/300x200" alt="Service" class="w-full h-32 object-cover rounded mb-4">
+                <h4 class="text-xl font-semibold mb-2">Content Writing</h4>
+                <p class="text-gray-300 mb-4">Engaging articles starting at $30</p>
+                <div class="flex items-center">
+                    <i class="fas fa-star text-yellow-400"></i>
+                    <span class="ml-2">4.7 (150 reviews)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="container mx-auto p-12 max-w-6xl text-center">
+        <h3 class="text-4xl font-bold mb-8 text-purple-400">How It Works</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6">
+                <i class="fas fa-search text-5xl text-green-400 mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2">1. Post Your Project</h4>
+                <p class="text-gray-300">Describe your needs and set your budget.</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-users text-5xl text-green-400 mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2">2. Choose Freelancers</h4>
+                <p class="text-gray-300">Review proposals and select the best match.</p>
+            </div>
+            <div class="p-6">
+                <i class="fas fa-check-circle text-5xl text-green-400 mb-4"></i>
+                <h4 class="text-2xl font-semibold mb-2">3. Get Work Done</h4>
+                <p class="text-gray-300">Collaborate and receive high-quality results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto p-12 max-w-6xl text-center">
+        <h3 class="text-4xl font-bold mb-8 text-green-400">About Freelance Hub</h3>
+        <p class="text-xl text-gray-300 mb-6">Freelance Hub is a leading platform connecting talented freelancers with clients worldwide. We empower businesses and individuals to bring their ideas to life through high-quality, affordable services.</p>
+        <p class="text-lg text-gray-400">Founded in 2023, we've helped thousands of projects succeed by fostering a community of creativity and collaboration.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="container mx-auto p-12 max-w-6xl">
+        <h3 class="text-4xl font-bold mb-8 text-center text-green-400">What Our Users Say</h3>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl glow">
+                <p class="text-gray-300 mb-4">"Freelance Hub helped me find amazing talent for my startup. Highly recommended!"</p>
+                <div class="flex items-center">
+                    <i class="fas fa-user-circle text-3xl text-purple-400 mr-4"></i>
+                    <div>
+                        <h5 class="font-semibold">John Doe</h5>
+                        <span class="text-gray-400">Client</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl shadow-2xl glow">
+                <p class="text-gray-300 mb-4">"As a freelancer, I've landed great projects here. The platform is user-friendly."</p>
+                <div class="flex items-center">
+                    <i class="fas fa-user-circle text-3xl text-purple-400 mr-4"></i>
+                    <div>
+                        <h5 class="font-semibold">Jane Smith</h5>
+                        <span class="text-gray-400">Freelancer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sign In Placeholder Section -->
+    <section id="signin" class="container mx-auto p-12 max-w-4xl text-center">
+        <h3 class="text-4xl font-bold mb-8 text-purple-400">Sign In</h3>
+        <p class="text-xl text-gray-300 mb-6">Sign in to access your account, manage projects, or start freelancing.</p>
+        <a href="#" class="bg-green-600 text-white px-8 py-4 rounded-full font-semibold btn-hover hover:bg-green-700">Go to Sign In Page</a>
+        <!-- Note: Replace with actual login form or link to a separate page -->
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 bg-opacity-90 p-12 mt-12">
+        <div class="container mx-auto max-w-7xl grid md:grid-cols-4 gap-8">
+            <div>
+                <h5 class="text-xl font-semibold mb-4 text-purple-400">Freelance Hub</h5>
+                <p class="text-gray-300">Connecting freelancers and clients worldwide.</p>
+            </div>
+            <div>
+                <h6 class="font-semibold mb-4">For Clients</h6>
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="#" class="hover:text-green-400">How to Hire</a></li>
+                    <li><a href="#" class="hover:text-green-400">Pricing</a></li>
+                    <li><a href="#" class="hover:text-green-400">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-semibold mb-4">For Freelancers</h6>
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="#" class="hover:text-green-400">How to Start</a></li>
+                    <li><a href="#" class="hover:text-green-400">Success Stories</a></li>
+                    <li><a href="#" class="hover:text-green-400">Resources</a></li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="font-semibold mb-4">Company</h6>
+                <ul class="space-y-2 text-gray-300">
+                    <li><a href="#about" class="hover:text-green-400">About Us</a></li>
+                    <li><a href="#" class="hover:text-green-400">Contact</a></li>
+                    <li><a href="#" class="hover:text-green-400">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-gray-400">
+            <p>&copy; 2023 Freelance Hub. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
